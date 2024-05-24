@@ -1,19 +1,21 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ChatIcon from './ChatIcon';
 import Chatbox from './Chatbox';
 
 const App = () => {
   return (
     <Router>
-      <div>
-        <Switch>
-          <Route path="/" exact component={ChatIcon} />
-          <Route path="/botOpen" component={Chatbox} />
-        </Switch>
-      </div>
+        
+        <Routes>
+          <Route path="/"  element={<ChatIcon />} />
+          <Route path="/botOpen" element={<Chatbox />} />
+        </Routes>
+      
     </Router>
+    
+    
   );
-};
+}
 
 export default App;
